@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //Xây dựng lớp khởi tạo tham số truyền vào
+  let MyDate = function (day,month,year){
+      this.day = day;
+      this.month = month;
+      this.year = year;
+      // Xây dựng phương thức trả về
+      this.getDay = function (){
+          return this.day;
+      }
+
+      this.getMonth = function (){
+          return this.month;
+      }
+
+      this.getYear = function (){
+          return this.year;
+      }
+
+      // xây dựng phương thức thiết lập đặt lại giá trị các thuộc tính
+
+      this.setDay  = function (day){
+          this.day = day;
+      }
+
+      this.setMonth = function (month){
+          this.month = month;
+      }
+
+      this.setYear = function (year){
+          this.year = year;
+      }
+  };
+
+
+    // Sử dụng lớp vừa tạo
+
+    let date = new MyDate(22,3,2021);
+
+    // truy nhập vào phương thức date
+
+    let day = date.getDay();
+    let month  = date.getMonth();
+    let year = date.getYear();
+
+    //thay đổi ngày tháng năm
+    date.setDay(10);
+    date.setMonth(10);
+    date.setYear(2021);
+
+
+    let day1 = date.getDay();
+    let month1  = date.getMonth();
+    let year1 = date.getYear();
+
+    // Hiển thị ngày tháng năm
+
+    alert(day+ '/' +month+ '/' +year);
+    alert(day1+ '/' +month1+ '/' +year1);
+
+
+</script>
